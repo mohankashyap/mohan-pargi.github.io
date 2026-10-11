@@ -1,285 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohan Kashyap Pargi</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohan Kashyap Pargi — Data Scientist, Healthcare AI</title>
+<meta name="description" content="Mohan Kashyap Pargi is a Data Scientist at Children's Hospital of Philadelphia working on clinical NLP, large language models and computer vision for behavioral and healthcare research." />
+<meta property="og:title" content="Mohan Kashyap Pargi — Healthcare AI" />
+<meta property="og:description" content="Data Scientist at CHOP. Clinical NLP, LLMs, computer vision and behavioral imaging." />
+<meta property="og:type" content="profile" />
 
-  <style>
-    :root {
-      --accent: #1a73e8;
-      --text: #222;
-      --muted: #555;
-      --bg: #ffffff;
-      --max-width: 980px;
+<!-- Structured data so search engines link this site with your scholarly profiles -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohan Kashyap Pargi",
+  "jobTitle": "Data Scientist",
+  "worksFor": { "@type": "Organization", "name": "Children's Hospital of Philadelphia" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Indian Institute of Space Science and Technology" },
+    { "@type": "CollegeOrUniversity", "name": "PES Institute of Technology" }
+  ],
+  "knowsAbout": ["Clinical natural language processing","Large language models","Computer vision","Behavioral imaging","Autism research","Smart cities"],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=pPg4cLEAAAAJ&amp;hl=en",
+    "https://orcid.org/0009-0005-4565-6526",
+    "https://openreview.net/profile?id=~MOHAN_KASHYAP_PARGI1",
+    "https://www.linkedin.com/in/mohan-kashyap-pargi-a520483b/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1d1f23;
+    --muted: #5d636e;
+    --line: #e6e2da;
+    --accent: #0f6e6a;
+    --accent-soft: #e3f1ef;
+    --max: 1040px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121416; --surface: #1a1d20; --text: #e9e7e2; --muted: #a2a8b0;
+      --line: #2b3035; --accent: #5cc7bd; --accent-soft: #19302e;
     }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121416; --surface: #1a1d20; --text: #e9e7e2; --muted: #a2a8b0;
+    --line: #2b3035; --accent: #5cc7bd; --accent-soft: #19302e;
+  }
 
-    html { scroll-behavior: smooth; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.2; }
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.65;
-    }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+  /* Top bar */
+  .bar {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+  }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 56px; }
+  .bar .brand { font-family: Fraunces, serif; font-weight: 600; color: var(--text); white-space: nowrap; }
+  .bar nav { display: flex; gap: 18px; overflow-x: auto; scrollbar-width: none; font-size: .93rem; }
+  .bar nav a { color: var(--muted); white-space: nowrap; }
+  .bar nav a:hover { color: var(--accent); text-decoration: none; }
+  @media (max-width: 760px) { .bar .brand { display: none; } }
 
-    header {
-      border-bottom: 1px solid #e5e5e5;
-      padding: 2rem 1rem 1.5rem;
-    }
+  /* Hero */
+  .hero { padding: 64px 0 40px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.3rem); margin: 0 0 8px; }
+  .role { font-size: 1.15rem; margin: 0 0 6px; }
+  .tags { color: var(--muted); margin: 0 0 22px; }
+  .avatar {
+    width: 168px; height: 168px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--accent-soft); color: var(--accent);
+    font: 600 3rem Fraunces, serif; border: 1px solid var(--line); object-fit: cover;
+  }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px;
+    border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+    color: var(--text); font-size: .9rem; font-weight: 500;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .btn.primary:hover { color: var(--bg); opacity: .9; }
+  @media (max-width: 680px) { .hero { grid-template-columns: 1fr; padding-top: 40px; } .avatar { width: 120px; height: 120px; font-size: 2.2rem; order: -1; } }
 
-    header h1 { margin: 0; font-size: 2.1rem; }
-    header p { margin: 0.3rem 0; color: var(--muted); }
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-bottom: 24px; }
+  .stat { background: var(--surface); padding: 18px; }
+  .stat b { display: block; font: 600 1.8rem Fraunces, serif; color: var(--accent); }
+  .stat span { color: var(--muted); font-size: .88rem; }
+  @media (max-width: 680px) { .stats { grid-template-columns: repeat(2, 1fr); } }
 
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  section > h2 { font-size: 1.75rem; margin: 0 0 22px; }
+  .lead { font-size: 1.07rem; max-width: 72ch; }
+  .lead p { margin: 0 0 14px; }
 
-    main {
-      max-width: var(--max-width);
-      margin: auto;
-      padding: 2.5rem 1rem;
-    }
+  /* Cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .card h3 { font-size: 1.12rem; margin: 0 0 8px; }
+  .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .card .kw { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: .78rem; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
 
-    section { margin-bottom: 3.5rem; }
+  /* Timeline */
+  .timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 24px 24px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
+  .timeline li.now::before { background: var(--accent); }
+  .timeline h3 { margin: 0; font-size: 1.08rem; }
+  .timeline .org { color: var(--muted); }
+  .timeline p { margin: 4px 0 0; font-size: .95rem; }
 
-    section h2 {
-      font-size: 1.45rem;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-      padding-bottom: 0.25rem;
-    }
+  /* Publications */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .filters button {
+    font: inherit; font-size: .88rem; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+  }
+  .filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .pubs { list-style: none; padding: 0; margin: 0; }
+  .pub { display: grid; grid-template-columns: 64px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px dashed var(--line); }
+  .pub .yr { font: 600 1rem Fraunces, serif; color: var(--muted); padding-top: 1px; }
+  .pub .t { font-weight: 600; }
+  .pub .a, .pub .v { color: var(--muted); font-size: .93rem; }
+  .pub .v em { color: var(--text); }
+  .pub .x { font-size: .85rem; margin-top: 4px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .badge { font-size: .72rem; padding: 2px 8px; border-radius: 6px; border: 1px solid var(--line); color: var(--muted); margin-left: 6px; vertical-align: 2px; }
+  .me { color: var(--text); font-weight: 600; }
+  @media (max-width: 560px) { .pub { grid-template-columns: 1fr; gap: 2px; } }
 
-    section h3 {
-      margin-top: 1.8rem;
-      font-size: 1.15rem;
-    }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+  ul.clean { padding-left: 1.1rem; margin: 0; }
+  ul.clean li { margin-bottom: 8px; }
 
-    ul { padding-left: 1.2rem; }
-    li { margin-bottom: 1.1rem; }
-
-    .meta {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    footer {
-      border-top: 1px solid #e5e5e5;
-      padding: 1.5rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-  </style>
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: .88rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .theme-toggle { font: inherit; font-size: .85rem; background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Mohan Kashyap Pargi</h1>
-  <p><strong>Data Scientist</strong> — Children’s Hospital of Philadelphia (CHOP)</p>
-  <p class="meta">Applied AI • Healthcare NLP • Computer Vision • Medical Informatics</p>
+<div class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">M. K. Pargi</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#service">Service</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
 
-  <nav>
-    <a href="#biography">Biography</a>
-    <a href="#education">Education</a>
-    <a href="#publications">Publications</a>
-    <a href="#service">Peer Review</a>
-    <a href="#awards">Awards</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<main class="wrap" id="top">
 
-<main>
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>Mohan Kashyap Pargi</h1>
+      <p class="role"><strong>Data Scientist</strong> · Children’s Hospital of Philadelphia (CHOP)</p>
+      <p class="tags">Healthcare AI · Clinical NLP &amp; LLMs · Computer Vision · Behavioral Imaging</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:mohan.tita@gmail.com">Email me</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=pPg4cLEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn" href="https://orcid.org/0009-0005-4565-6526" target="_blank" rel="noopener">ORCID</a>
+        <a class="btn" href="https://openreview.net/profile?id=~MOHAN_KASHYAP_PARGI1" target="_blank" rel="noopener">OpenReview</a>
+        <a class="btn" href="https://www.linkedin.com/in/mohan-kashyap-pargi-a520483b/" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- <a class="btn" href="cv.pdf">CV (PDF)</a>  ← upload cv.pdf to the repo and uncomment -->
+      </div>
+    </div>
+    <!-- To use a photo: add photo.jpg to the repo and replace this div with
+         <img class="avatar" src="photo.jpg" alt="Mohan Kashyap Pargi" /> -->
+    <div class="avatar" aria-hidden="true">MKP</div>
+  </div>
 
-<section id="biography">
-  <h2>Biography</h2>
-  <p>
-    I am a Data Scientist at the Children’s Hospital of Philadelphia (CHOP), where I
-    develop applied artificial intelligence systems for healthcare research. My work
-    focuses on clinical natural language processing, large language models, and
-    computer vision methods for analyzing large-scale, real-world clinical and
-    behavioral data.
-  </p>
-  <p>
-    Previously, I held research and engineering roles at A*STAR, Hitachi Asia,
-    Nanyang Technological University, and the Indian Institute of Science. My research
-    spans healthcare AI, autism research, smart cities, intelligent sensing, and
-    theory-guided machine learning. I have published in international journals,
-    conferences, and edited volumes, and have received multiple best paper awards.
-  </p>
-</section>
+  <div class="stats">
+    <div class="stat"><b id="pubCount">15</b><span>Publications &amp; preprints</span></div>
+    <div class="stat"><b>3</b><span>Countries worked in: USA, Singapore, India</span></div>
+    <div class="stat"><b>10</b><span>Languages in multilingual NLP system</span></div>
+    <div class="stat"><b>Multiple</b><span>Best paper awards</span></div>
+  </div>
 
-<section id="education">
-  <h2>Education</h2>
-  <ul>
-    <li>
-      <strong>M.Tech, Machine Learning & Computing</strong><br/>
-      Indian Institute of Space Science & Technology (IIST), India<br/>
-      <span class="meta">Department of Space Fellowship</span>
-    </li>
-    <li>
-      <strong>B.Tech, Electrical Engineering</strong><br/>
-      PES Institute of Technology, Bangalore, India
-    </li>
-  </ul>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="lead">
+      <p>
+        I am a Data Scientist at the Children’s Hospital of Philadelphia (CHOP), where I build applied
+        artificial intelligence systems for healthcare and behavioral research. My work brings together
+        clinical natural language processing, large language models and computer vision to measure and
+        understand human behavior and health from large-scale, real-world clinical, video and text data —
+        with a particular focus on autism research.
+      </p>
+      <p>
+        Before CHOP, I held research and engineering roles at A*STAR, Hitachi Asia, Nanyang Technological
+        University and the Indian Institute of Science, working on problems that range from intrusion
+        detection and smart-city sensing to multilingual crisis-response NLP and theory-guided machine
+        learning for catalysis. Across these settings, my focus has stayed the same: taking machine learning
+        out of the benchmark and into systems that domain experts can rely on.
+      </p>
+      <p>
+        I hold an M.Tech in Machine Learning &amp; Computing from the Indian Institute of Space Science &amp;
+        Technology, supported by a Department of Space fellowship, and a B.Tech in Electrical Engineering
+        from PES Institute of Technology, Bangalore. I have published in international journals,
+        conferences and edited volumes, received multiple best paper awards, and serve as a peer reviewer
+        in applied AI, computer vision and machine learning.
+      </p>
+    </div>
+  </section>
 
-<section id="publications">
-  <h2>Publications</h2>
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Research</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Behavioral imaging &amp; autism</h3>
+        <p>Computer-vision methods that turn video of natural social interaction into validated, interpretable behavioral measures — such as social gaze — and open tools that put them in the hands of clinical researchers.</p>
+        <div class="kw"><span class="chip">Bitbox</span><span class="chip">Social gaze</span><span class="chip">Face &amp; body analysis</span></div>
+      </div>
+      <div class="card">
+        <h3>Clinical NLP &amp; LLMs</h3>
+        <p>Language models for clinical and public-health text, including a deep-learning system tested across ten languages to support response during the COVID-19 pandemic.</p>
+        <div class="kw"><span class="chip">Multilingual NLP</span><span class="chip">LLMs</span><span class="chip">Public health</span></div>
+      </div>
+      <div class="card">
+        <h3>Smart cities &amp; intelligent sensing</h3>
+        <p>Low-power camera and PIR-sensor systems for intrusion detection, vehicle classification from RGB-D imagery, smart parking, and AI/IoT pipelines for public-safety event detection.</p>
+        <div class="kw"><span class="chip">Edge vision</span><span class="chip">IoT</span><span class="chip">Urban mobility</span></div>
+      </div>
+      <div class="card">
+        <h3>Machine learning for science &amp; industry</h3>
+        <p>Theory-guided machine learning to predict noble-metal catalyst performance (featured on a <em>ChemCatChem</em> cover), sonar-based biomass estimation for aquaculture, and audio-visual analysis of classroom climate.</p>
+        <div class="kw"><span class="chip">Scientific ML</span><span class="chip">Sonar</span><span class="chip">Multimodal</span></div>
+      </div>
+    </div>
+  </section>
 
-  <h3>Journal Articles</h3>
-  <ul>
-    <li>
-      <strong>Theory-guided machine learning to predict the performance of noble metal catalysts in the water-gas shift reaction</strong><br/>
-      Chattoraj J., Hamadicharef B., Kong J.F., <strong>Pargi M.K.</strong>, et al.<br/>
-      <em>ChemCatChem</em>, 2022<br/>
-      <a href="https://scholar.google.com/scholar?q=Theory-guided+machine+learning+to+predict+the+performance+of+noble+metal+catalysts+in+the+water-gas+shift+reaction">Google Scholar</a>
-    </li>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <!-- Add dates and exact titles to each entry, e.g. <span class="org">· 2023–present</span> -->
+    <ul class="timeline">
+      <li class="now">
+        <h3>Data Scientist</h3>
+        <div class="org">Children’s Hospital of Philadelphia (CHOP), Philadelphia, USA</div>
+        <p>Applied AI for healthcare research: clinical NLP, LLMs and computer vision for behavioral data; co-developer of the open-source Bitbox toolkit.</p>
+      </li>
+      <li>
+        <h3>Research &amp; Engineering</h3>
+        <div class="org">A*STAR, Singapore</div>
+        <p>Theory-guided machine learning for catalysis; multilingual NLP for pandemic response.</p>
+      </li>
+      <li>
+        <h3>Research &amp; Engineering</h3>
+        <div class="org">Hitachi Asia, Singapore</div>
+        <p>AI for smart-city and industrial applications.</p>
+      </li>
+      <li>
+        <h3>Entrepreneurship Residency</h3>
+        <div class="org">Antler · 2020</div>
+      </li>
+      <li>
+        <h3>Research</h3>
+        <div class="org">Nanyang Technological University, Singapore</div>
+        <p>Machine learning on audio and video, including analysis of classroom climate.</p>
+      </li>
+      <li>
+        <h3>Research</h3>
+        <div class="org">Indian Institute of Science, Bangalore, India</div>
+        <p>Intelligent sensing: PIR and low-power camera systems for outdoor intrusion detection and classification.</p>
+      </li>
+    </ul>
+  </section>
 
-    <li>
-      <strong>Cover Feature: Theory-Guided Machine Learning to Predict the Performance of Noble Metal Catalysts</strong><br/>
-      Chattoraj J., Hamadicharef B., Kong J.F., <strong>Pargi M.K.</strong>, et al.<br/>
-      <em>ChemCatChem</em>, 2022<br/>
-      <a href="https://scholar.google.com/scholar?q=Cover+Feature+Theory-Guided+Machine+Learning+to+Predict+the+Performance+of+Noble+Metal+Catalysts">Google Scholar</a>
-    </li>
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="filters" role="group" aria-label="Filter publications">
+      <button aria-pressed="true" data-f="all">All</button>
+      <button aria-pressed="false" data-f="journal">Journals</button>
+      <button aria-pressed="false" data-f="conf">Conferences</button>
+      <button aria-pressed="false" data-f="chapter">Book chapters</button>
+      <button aria-pressed="false" data-f="preprint">Preprints</button>
+    </div>
 
-    <li>
-      <strong>Development and testing of a multi-lingual NLP-based deep learning system in 10 languages for COVID-19 pandemic crisis</strong><br/>
-      Yang L.W.Y. et al., <strong>Pargi M.K.</strong><br/>
-      <em>Frontiers in Public Health</em>, 2023<br/>
-      <a href="https://scholar.google.com/scholar?q=Development+and+testing+of+a+multi-lingual+NLP-based+deep+learning+system+in+10+languages+for+COVID-19+pandemic+crisis">Google Scholar</a>
-    </li>
-  </ul>
+    <ul class="pubs" id="pubs">
+      <li class="pub" data-t="preprint">
+        <div class="yr">2025</div>
+        <div>
+          <div class="t">Bitbox: Behavioral Imaging Toolbox for Computational Analysis of Behavior from Videos <span class="badge">Preprint</span></div>
+          <div class="a">E. Sariyanidi, G. Nair, L. Yankowitz, C. J. Zampella, <span class="me">M. K. Pargi</span>, A. Manakiwala, M. McNealis, J. D. Herrington, J. Cohn, R. T. Schultz, B. Tunc</div>
+          <div class="v"><em>arXiv</em> 2512.17655</div>
+          <div class="x"><a href="https://arxiv.org/abs/2512.17655" target="_blank" rel="noopener">Paper</a><a href="https://github.com/compsygroup/bitbox" target="_blank" rel="noopener">Code</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="chapter">
+        <div class="yr">2025</div>
+        <div>
+          <div class="t">Computer Vision in Smart Parking Solution Systems: Enhancing Urban Mobility <span class="badge">Chapter</span></div>
+          <div class="v"><em>Springer</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Computer+Vision+in+Smart+Parking+Solution+Systems" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="chapter">
+        <div class="yr">2025</div>
+        <div>
+          <div class="t">Transforming Public Safety and QoL in Smart Cities: Automated Event Detection and Response Generation with AI and IoT <span class="badge">Chapter</span></div>
+          <div class="v"><em>Springer</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Transforming+Public+Safety+and+QoL+in+Smart+Cities+AI+IoT" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="preprint">
+        <div class="yr">2024</div>
+        <div>
+          <div class="t">Automatic Measurement of Social Gaze During Naturalistic Conversations in Autism <span class="badge">Preprint</span></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Automatic+Measurement+of+Social+Gaze+During+Naturalistic+Conversations+in+Autism" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="journal">
+        <div class="yr">2023</div>
+        <div>
+          <div class="t">Development and testing of a multi-lingual NLP-based deep learning system in 10 languages for COVID-19 pandemic crisis <span class="badge">Journal</span></div>
+          <div class="a">L. W. Y. Yang, et al., <span class="me">M. K. Pargi</span></div>
+          <div class="v"><em>Frontiers in Public Health</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Development+and+testing+of+a+multi-lingual+NLP-based+deep+learning+system+in+10+languages+for+COVID-19+pandemic+crisis" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="journal">
+        <div class="yr">2022</div>
+        <div>
+          <div class="t">Theory-guided machine learning to predict the performance of noble metal catalysts in the water-gas shift reaction <span class="badge">Journal</span></div>
+          <div class="a">J. Chattoraj, B. Hamadicharef, J. F. Kong, <span class="me">M. K. Pargi</span>, et al.</div>
+          <div class="v"><em>ChemCatChem</em> · selected as Cover Feature</div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Theory-guided+machine+learning+to+predict+the+performance+of+noble+metal+catalysts+in+the+water-gas+shift+reaction" target="_blank" rel="noopener">Scholar</a><a href="https://scholar.google.com/scholar?q=Cover+Feature+Theory-Guided+Machine+Learning+to+Predict+the+Performance+of+Noble+Metal+Catalysts" target="_blank" rel="noopener">Cover feature</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="conf">
+        <div class="yr">2022</div>
+        <div>
+          <div class="t">Improving aquaculture systems using AI for biomass estimation on sonar images <span class="badge">Conference</span></div>
+          <div class="v"><em>IEEE ICMLA</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Improving+aquaculture+systems+using+AI+biomass+estimation+sonar" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="conf">
+        <div class="yr">2019</div>
+        <div>
+          <div class="t">Classification of different vehicles in traffic using RGB and depth images <span class="badge">Conference</span></div>
+          <div class="v"><em>IEEE IST</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Classification+of+different+vehicles+RGB+Depth+Fast+RCNN" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="conf">
+        <div class="yr">2018</div>
+        <div>
+          <div class="t">Inferring the climate in classrooms from audio and video recordings <span class="badge">Conference</span></div>
+          <div class="v"><em>IEEE TALE</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Inferring+the+climate+in+classrooms+audio+video+machine+learning" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="conf">
+        <div class="yr">2018</div>
+        <div>
+          <div class="t">Human crawl vs animal movement and person-with-object classification using CNN <span class="badge">Conference</span></div>
+          <div class="v"><em>ICACCI</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Human+crawl+vs+animal+movement+person+with+object+CNN" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="conf">
+        <div class="yr">2017</div>
+        <div>
+          <div class="t">An optical-camera complement to a PIR sensor array for intrusion detection and classification <span class="badge">Conference</span></div>
+          <div class="v"><em>IEEE LCN Workshops</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=optical-camera+complement+to+a+PIR+sensor+array+for+intrusion+detection" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="conf">
+        <div class="yr">2017</div>
+        <div>
+          <div class="t">Comparing chirplet-based classification with alternate feature-extraction approaches for outdoor intrusion detection <span class="badge">Conference</span></div>
+          <div class="v"><em>ICACCI</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=chirplet-based+classification+outdoor+intrusion+detection+PIR" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="conf">
+        <div class="yr">2017</div>
+        <div>
+          <div class="t">A reduced-complexity, reduced-power camera system for intrusion classification <span class="badge">Conference</span></div>
+          <div class="v"><em>ICACCI</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=reduced-complexity+camera+system+for+intrusion+classification" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+      <li class="pub" data-t="conf">
+        <div class="yr">2017</div>
+        <div>
+          <div class="t">Direction and gender classification using CNN for side-view images <span class="badge">Conference</span></div>
+          <div class="v"><em>ICIIP</em></div>
+          <div class="x"><a href="https://scholar.google.com/scholar?q=Direction+and+gender+classification+CNN+side-view+images" target="_blank" rel="noopener">Scholar</a></div>
+        </div>
+      </li>
+    </ul>
+    <p style="color:var(--muted);font-size:.9rem;margin-top:18px">Full and up-to-date list on <a href="https://scholar.google.com/citations?user=pPg4cLEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </section>
 
-  <h3>Conference Papers</h3>
-  <ul>
-    <li>
-      <strong>An optical-camera complement to a PIR sensor array for intrusion detection and classification</strong><br/>
-      IEEE LCN Workshops, 2017<br/>
-      <a href="https://scholar.google.com/scholar?q=optical-camera+complement+to+a+PIR+sensor+array+for+intrusion+detection">Google Scholar</a>
-    </li>
+  <!-- SERVICE -->
+  <section id="service">
+    <h2>Peer Review &amp; Service</h2>
+    <div class="two">
+      <div class="card">
+        <h3>Reviewing</h3>
+        <p>Reviewer for scholarly submissions in applied artificial intelligence, computer vision and machine learning, with service records on OpenReview and ORCID.</p>
+        <!-- Add the venues you have reviewed for, e.g.:
+        <ul class="clean" style="margin-top:12px">
+          <li>Conference / workshop name — Reviewer, 2025</li>
+          <li>Journal name — Reviewer, 2024–present</li>
+        </ul> -->
+        <div class="kw">
+          <a class="chip" href="https://openreview.net/profile?id=~MOHAN_KASHYAP_PARGI1" target="_blank" rel="noopener">OpenReview record →</a>
+          <a class="chip" href="https://orcid.org/0009-0005-4565-6526" target="_blank" rel="noopener">ORCID peer reviews →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Open-source &amp; community</h3>
+        <p>Co-developer of Bitbox, an open-source Python toolkit that gives behavioral and clinical scientists standardized, interpretable measures of nonverbal behavior from video.</p>
+        <div class="kw"><a class="chip" href="https://github.com/compsygroup/bitbox" target="_blank" rel="noopener">Bitbox on GitHub →</a></div>
+      </div>
+    </div>
+  </section>
 
-    <li>
-      <strong>Comparing chirplet-based classification with alternate feature-extraction approaches for outdoor intrusion detection</strong><br/>
-      ICACCI, 2017<br/>
-      <a href="https://scholar.google.com/scholar?q=chirplet-based+classification+outdoor+intrusion+detection+PIR">Google Scholar</a>
-    </li>
+  <!-- AWARDS -->
+  <section id="awards">
+    <h2>Awards &amp; Honors</h2>
+    <div class="grid">
+      <div class="card"><h3>Best Paper Awards</h3><p>Multiple best paper awards at international conferences.</p></div>
+      <div class="card"><h3>Cover Feature, <em>ChemCatChem</em></h3><p>Theory-guided ML for noble-metal catalysts selected as a journal cover feature (2022).</p></div>
+      <div class="card"><h3>Department of Space Fellowship</h3><p>Government of India fellowship for M.Tech studies at IIST.</p></div>
+      <div class="card"><h3>Antler Residency</h3><p>Selected for the Antler entrepreneurship residency program (2020).</p></div>
+    </div>
+  </section>
 
-    <li>
-      <strong>A reduced-complexity, reduced-power camera system for intrusion classification</strong><br/>
-      ICACCI, 2017<br/>
-      <a href="https://scholar.google.com/scholar?q=reduced-complexity+camera+system+for+intrusion+classification">Google Scholar</a>
-    </li>
-
-    <li>
-      <strong>Direction and gender classification using CNN for side-view images</strong><br/>
-      ICIIP, 2017<br/>
-      <a href="https://scholar.google.com/scholar?q=Direction+and+gender+classification+CNN+side-view+images">Google Scholar</a>
-    </li>
-
-    <li>
-      <strong>Human crawl vs animal movement and person-with-object classification using CNN</strong><br/>
-      ICACCI, 2018<br/>
-      <a href="https://scholar.google.com/scholar?q=Human+crawl+vs+animal+movement+person+with+object+CNN">Google Scholar</a>
-    </li>
-
-    <li>
-      <strong>Inferring the climate in classrooms from audio and video recordings</strong><br/>
-      IEEE TALE, 2018<br/>
-      <a href="https://scholar.google.com/scholar?q=Inferring+the+climate+in+classrooms+audio+video+machine+learning">Google Scholar</a>
-    </li>
-
-    <li>
-      <strong>Classification of different vehicles in traffic using RGB and depth images</strong><br/>
-      IEEE IST, 2019<br/>
-      <a href="https://scholar.google.com/scholar?q=Classification+of+different+vehicles+RGB+Depth+Fast+RCNN">Google Scholar</a>
-    </li>
-
-    <li>
-      <strong>Improving aquaculture systems using AI for biomass estimation on sonar images</strong><br/>
-      IEEE ICMLA, 2022<br/>
-      <a href="https://scholar.google.com/scholar?q=Improving+aquaculture+systems+using+AI+biomass+estimation+sonar">Google Scholar</a>
-    </li>
-  </ul>
-
-  <h3>Book Chapters</h3>
-  <ul>
-    <li>
-      <strong>Computer Vision in Smart Parking Solution Systems: Enhancing Urban Mobility</strong><br/>
-      Springer, 2025<br/>
-      <a href="https://scholar.google.com/scholar?q=Computer+Vision+in+Smart+Parking+Solution+Systems">Google Scholar</a>
-    </li>
-
-    <li>
-      <strong>Transforming Public Safety and QoL in Smart Cities: Automated Event Detection and Response Generation with AI and IoT</strong><br/>
-      Springer, 2025<br/>
-      <a href="https://scholar.google.com/scholar?q=Transforming+Public+Safety+and+QoL+in+Smart+Cities+AI+IoT">Google Scholar</a>
-    </li>
-  </ul>
-
-  <h3>Preprints & Technical Reports</h3>
-  <ul>
-    <li>
-      <strong>Automatic Measurement of Social Gaze During Naturalistic Conversations in Autism</strong><br/>
-      2024<br/>
-      <a href="https://scholar.google.com/scholar?q=Automatic+Measurement+of+Social+Gaze+During+Naturalistic+Conversations+in+Autism">Google Scholar</a>
-    </li>
-
-    <li>
-      <strong>Bitbox: Behavioral Imaging Toolbox for Computational Analysis of Behavior from Videos</strong><br/>
-      arXiv, 2025<br/>
-      <a href="https://scholar.google.com/scholar?q=Bitbox+Behavioral+Imaging+Toolbox+Computational+Analysis+Behavior+Videos">Google Scholar</a>
-    </li>
-  </ul>
-</section>
-
-<section id="service">
-  <h2>Peer Review Service</h2>
-  <p>
-    Reviewer for scholarly submissions in applied artificial intelligence,
-    computer vision, and machine learning, as reflected through OpenReview
-    and ORCID-linked academic service records.
-  </p>
-</section>
-
-<section id="awards">
-  <h2>Awards & Honors</h2>
-  <ul>
-    <li>Multiple Best Paper Awards — International Conferences</li>
-    <li>Department of Space Fellowship (Government of India)</li>
-    <li>Antler Entrepreneurship Residency Program (2020)</li>
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <ul>
-    <li>Email: <a href="mailto:mohan.tita@gmail.com">mohan.tita@gmail.com</a></li>
-    <li><a href="https://scholar.google.com/citations?user=pPg4cLEAAAAJ">Google Scholar</a></li>
-    <li><a href="https://www.linkedin.com/in/mohan-kashyap-pargi-a520483b/">LinkedIn</a></li>
-    <li><a href="https://orcid.org/0009-0005-4565-6526">ORCID</a></li>
-    <li><a href="https://openreview.net/profile?id=~MOHAN_KASHYAP_PARGI1">OpenReview</a></li>
-  </ul>
-</section>
+  <!-- EDUCATION + CONTACT -->
+  <section id="contact">
+    <div class="two">
+      <div>
+        <h2>Education</h2>
+        <ul class="timeline">
+          <li><h3>M.Tech, Machine Learning &amp; Computing</h3><div class="org">Indian Institute of Space Science &amp; Technology (IIST)</div></li>
+          <li><h3>B.Tech, Electrical Engineering</h3><div class="org">PES Institute of Technology, Bangalore</div></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p class="lead" style="margin-top:0">I’m happy to talk about collaborations in healthcare AI, behavioral imaging and clinical NLP.</p>
+        <div class="links">
+          <a class="btn primary" href="mailto:mohan.tita@gmail.com">mohan.tita@gmail.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/mohan-kashyap-pargi-a520483b/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 <footer>
-  © <span id="year"></span> Mohan Kashyap Pargi
+  <div class="wrap">
+    <span>© <span id="year"></span> Mohan Kashyap Pargi · Philadelphia, PA</span>
+    <button class="theme-toggle" id="theme">Toggle theme</button>
+  </div>
 </footer>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  document.getElementById("pubCount").textContent = document.querySelectorAll("#pubs .pub").length;
 
+  // Publication filters
+  const btns = document.querySelectorAll(".filters button");
+  btns.forEach(b => b.addEventListener("click", () => {
+    btns.forEach(x => x.setAttribute("aria-pressed", x === b));
+    const f = b.dataset.f;
+    document.querySelectorAll("#pubs .pub").forEach(p => {
+      p.style.display = (f === "all" || p.dataset.t === f) ? "" : "none";
+    });
+  }));
+
+  // Theme toggle (remembered per browser)
+  const root = document.documentElement;
+  try { const s = localStorage.getItem("theme"); if (s) root.dataset.theme = s; } catch (e) {}
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark"
+      : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  });
+</script>
 </body>
 </html>
